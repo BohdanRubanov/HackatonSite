@@ -7,29 +7,59 @@
     <script defer src= "/static/script.js"></script>
     <title>Document</title>
 </head>
+<body>
 
-<header>
-    <p>Швейна рота</p>
-    <a href="/aboutUs/">About us</a>
-    <a href="/posts/">Вироби</a>
-    <a href="/events/">Події</a>
-    <a href="/study/">Навчання</a>
-    <a href="/reports/">Звіти</a>
-    <a href="/profile/">Профіль</a>
+    <header>
+        <nav>
+            <div class="menu-left">
+                <a href="/aboutUs/">Про нас</a>
+            </div>
+            <div class="menu-center">
+                <a href="/posts/">Вироби</a>
+                <a href="/events/">Події</a>
+                <a href="/study/">Навчання</a>
+                <a href="/reports/">Звіти</a>
+            </div>
+            <div class="menu-right">
+                <a href="/profile/">Профіль</a>
+                <a href="/language/" class="language"><span class="arrow"></span> EN</a>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <section class="hero">
+        <h1>Швейна рота</h1>
+        <div class="overlay">
+            <p>Підтримай Україну разом з нами!</p>
+            <div>
+                <button class="button-donat" >Донат</button>
+                <button class="button-stading">Запис на навчання</button>
+            </div>
+        </div>
+    </section>
 </header>
 
-<section class="hero">
-    <img src="/static/images/bg1.jpg" alt="Колоскі">       
-    <h1>Швейна рота</h1>
-    <div class="overlay">
-        <p>Підтримай Україну разом з нами!</p>
-        <div class="buttons">
-            <button>Донат</button>
-            <button>Запис на навчання</button>
-        </div>
+<div class="background-image"></div>
+<h1>Про нас</h1>
+<div class="about-section">
+    <div class="about-item">
+        <h3>Навчаємо всіх бажаючих волонтерів</h3>
+        <img src="/static/images/sample1.png" alt="Навчання волонтерів">       
+        <a href="/details/">Детальніше</a>
     </div>
-</section>
+    <div class="about-item">
+        <h3>Допомагаємо ЗСУ</h3>
+        <img src="/static/images/sample2.png" alt="Допомога ЗСУ">
+        <a href="/details/">Детальніше</a>
+    </div>
+</div>
+<button class="btn-learn-more">Запис на навчання</button>
 
-<body>
+<p class="description">
+    “Швейна рота” — це волонтерський проект, який займається пошиттям адаптивного одягу для поранених захисників і захисниць України, а також цивільних, які постраждали внаслідок російської агресії. 
+    Зусилля проекту спрямовані на забезпечення поранених якісним, комфортним і функціональним одягом, який допомагає зберегти гідність і полегшити реабілітацію на всіх етапах — від евакуації до одужання.
+</p>
+
 </body>
 </html>

@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    line-height: 1.5;
+    font-family:'Jost' ;
+    font-weight: 700;
+    font-style: normal;
+}
+
+header {
+    background-color: #d2b189; /* Светло-коричневый фон для хедера */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d2b18a; /* Колір фону, схожий на ваш */
+    padding: 10px 20px;
+}
+
+.menu-left {
+    flex: 1; /* Залишити на своєму місці */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-center {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Вирівнювання по центру */
+    gap: 50px; /* Відстань між елементами */
+}
+
+.menu-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання до правого краю */
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3a3a; /* Колір тексту */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #3a76c0; /* Цвет текста при наведении - синий */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.language {
+    position: relative; /* Для коректної позиції стрілки */
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent; /* Ліва сторона трикутника */
+    border-right: 6px solid transparent; /* Права сторона трикутника */
+    border-top: 6px solid #4e1f47; /* Верхня сторона (колір) */
+    margin-right: 8px; /* Відступ між стрілкою та текстом */
+    transition: border-color 0.3s ease;
+}
+
+.hero {
+
+    width: 100%; 
+    height: 832px; 
+    background-image: url('/static/images/bg1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
+    position: relative;
+    font-size: 128px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+    text-shadow: 10px 8px rgba(0, 0, 0, 0.17);
+    font-size: 128px;
+}
+
+.overlay {
+    background-color: rgba(146, 84, 30, 0.71);
+    width: 561;
+    height: 312;
+    padding: 10px 40px;
+    display: inline-block;
+    
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 31px;
+}
+
+
+.button-donat {
+    width: 216;
+    height: 56;
+
+    /* width: 154;
+    height: 32; */
+
+    font-size: 1rem;
+    background-color: #072051;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    display: inline;
+    flex-direction: column;
+
+    font-family:'Jost' ;
+    font-size: 28px;
+}
+
+.button-donat:hover {
+    background-color: #072051;
+}
+
+
+.button-stading {
+    width: 364;
+    height: 68;
+
+    font-size: 1rem;
+    background-color: #072051;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline;
+
+    flex-direction: column;
+    gap: 10px;
+    margin: 50px;
+
+    font-family:'Jost' ;
+    font-size: 28px;
+}
+
+.button-stading:hover {
+    background-color: #072051;
+}
