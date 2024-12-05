@@ -1,0 +1,31 @@
+#firstText {
+    font-size: 32px;
+    padding-left: 42px;
+    padding-right: 150px;
+        @font-face {
+            font-family: 'Jost', sans-serif;
+            src: url('/static/fonts/Jost-Regular.ttf');
+        }
+    
+}
+#h3 {
+    font-family: "Jost";
+    font-size: 32px;
+    padding-left: 41px;
+
+}
+#unorderedList{
+    font-size: 32px;
+    padding-left: 129px;
+    padding-right: 30px;
+}
+#firstPhoto {
+    position: relative;
+    right: -869px;
+    top: -578px;  
+}
+#secondPhoto {
+    position: relative;
+    right: -439px;
+    top: -195px;
+}
