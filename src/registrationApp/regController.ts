@@ -41,7 +41,7 @@ async function authRegistration(req: Request, res: Response) {
 
 
     if (newUser.status == "error") {
-        console.log('errir')
+        console.log('error')
         res.sendStatus(409);
         return
     }
