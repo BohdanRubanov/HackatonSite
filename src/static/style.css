@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D7C0AE;
+}
+header {
+    background-color: #d2b189; /* Светло-коричневый фон для хедера */
+    padding: 10px 20px;
+    text-align: center;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d2b18a; /* Колір фону, схожий на ваш */
+    padding: 10px 20px;
+}
+
+.menu-left {
+    flex: 1; /* Залишити на своєму місці */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-center {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Вирівнювання по центру */
+    gap: 50px; /* Відстань між елементами */
+}
+
+.menu-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання до правого краю */
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3a3a; /* Колір тексту */
+    font-weight: bold;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #3a76c0; /* Цвет текста при наведении - синий */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.language {
+    position: relative; /* Для коректної позиції стрілки */
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent; /* Ліва сторона трикутника */
+    border-right: 6px solid transparent; /* Права сторона трикутника */
+    border-top: 6px solid #4e1f47; /* Верхня сторона (колір) */
+    margin-right: 8px; /* Відступ між стрілкою та текстом */
+    transition: border-color 0.3s ease;
+}
+
+.language:hover .arrow {
+    border-top-color: #3a76c0; /* Зміна кольору стрілки при наведенні */
+}
+.background-image {
+    width: 100%; /* Полная ширина */
+    height: 900px; /* Высота области с фоном */
+    background-image: url('/static/images/bg1.jpg'); /* Укажите путь к изображению */
+    background-size: cover; /* Покрыть всю область */
+    background-position: center; /* Центрировать изображение */
+    background-repeat: no-repeat; /* Отключить повтор */
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.about-item {
+
+
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-item h3 {
+    margin: 10px 0;
+    background-color: #D9D9D9;
+    font-weight: normal;
+    font-style: italic;
+    
+}
+
+
+.about-item a {
+    position: relative;
+    text-decoration: none;
+    color: #4e1f47;
+    font-weight: bold;
+    z-index: 1;
+    font-size: large;
+
+}
+.about-item a::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    right: -10px;
+    bottom:-5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.btn-learn-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4e1f47;
+    color: white;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.description {
+    text-align: start ;
+    margin: 10px auto;
+    width: 95%;
+    color: #333;
+    font-size: 1.5rem;
+}
