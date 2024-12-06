@@ -40,6 +40,10 @@ app.get('/events/', (req: Request, res: Response) => {
     res.render('events')
    
 })
+app.get('/masterclass/', (req: Request, res: Response) => {
+    res.render('masterclass')
+   
+})
 app.get('/study/', (req: Request, res: Response) => {
     res.render('study')
    
