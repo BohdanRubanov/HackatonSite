@@ -1,36 +1,61 @@
- body{
-    margin: 0;
+body{
+   margin: 0;
 
-    padding: 0;
- }
- .background-image {
-    width: 100%;
-    min-height: 100%; /* Минимальная высота равна высоте экрана */
-    background-image: url('/static/images/bg2.png');
-    background-size: cover;
-    background-position: top ;
-    background-repeat: no-repeat;
+   padding: 0;
 }
- h1{
-    text-shadow: 0px 3px rgba(0, 0, 0, 0.25);
-    display: flex; /* Включает Flexbox */
-    align-items: center; /* Центрирует текст по вертикали */
-    justify-content: center; /* Центрирует текст по горизонтали */
-    text-align: center; 
- }
- .photoes1{
-    display: flex;
-    justify-content: center;
-    gap: 52px;
- }
- .photoes2 {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    margin-left: 290px;
-    margin-right: 250px;
- }
- p{
-    font-weight: bold;
-    margin-left: 50px;
- }
+.background-image {
+   width: 100%;
+   min-height: 100%; /* Минимальная высота равна высоте экрана */
+   background-image: url('/static/images/bg2.png');
+   background-size: cover;
+   background-position: top ;
+   background-repeat: no-repeat;
+}
+h1{
+   text-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+   display: flex; /* Включает Flexbox */
+   align-items: center; /* Центрирует текст по вертикали */
+   justify-content: center; /* Центрирует текст по горизонтали */
+   text-align: center; 
+}
+.photoes1{
+   display: flex;
+   justify-content: center;
+   gap: 52px;
+}
+.photoes2 {
+   display: flex;
+   justify-content: center;
+   gap: 120px;
+   margin-left: 290px;
+   margin-right: 250px;
+}
+p{
+   font-weight: bold;
+   margin-left: 50px;
+   font-size: 28;
+}
+video-container {
+  max-width: 600px; /* Увеличение максимальной ширины */
+  width: 50%; /* Процент от ширины экрана */
+  padding: 20px;
+  margin: auto;
+}
+
+/* Видео */
+iframe, video {
+  width: 50%;
+  height: 400px;
+  margin-top: 40px;
+  margin-left: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Подпись под видео */
+.video-caption {
+  margin-top: 40px;
+  margin-bottom: -20px;
+  font-size: 28px;
+  color: black;
+}

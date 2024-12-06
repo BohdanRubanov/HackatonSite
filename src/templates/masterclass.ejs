@@ -12,19 +12,26 @@
 
     
     
-    <style>
-        body {
-            background-image: linear-gradient(to bottom, #D7C0AE, #B7C4CF);
-        }
-    
-    </style>
+    <div class="background-image">
     <h1><%= Name %></h1>
     <p>Лекала:</p>
     <div class="photoes1">
         <img src=<%= InstructionImg1 %> alt="Лекало1">
         <img src=<%= InstructionImg2 %> alt="Лекало2">
     </div>
-    <a href=<%= Video %>>Link</a>
+    <div class="video-container">
+        <p class="video-caption">Відеоурок:</p>
+        <iframe 
+            width="800" 
+            height="450" 
+            src="<%= Video.replace('youtu.be', 'www.youtube.com/embed').split('?')[0] %>"
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+        
+    </div>
+   
     <p>Приклади готового одягу:</p>
     <div class="photoes2">
     <img src=<%= ExamplesImg1 %> alt="Готовий одяг1">
@@ -44,3 +51,4 @@
 
 </body>
 </html>
+

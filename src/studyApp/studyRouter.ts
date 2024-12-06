@@ -15,6 +15,7 @@ import controller_funcs from './studyController'
 router.get('/', controller_funcs.getAllMasterClasses)
 
 router.post('/create', authMiddleware, userRoleMiddleware, controller_funcs.createMasterClass)
+router.get('/create', authMiddleware, userRoleMiddleware, controller_funcs.createMasterClass)
 
 
 

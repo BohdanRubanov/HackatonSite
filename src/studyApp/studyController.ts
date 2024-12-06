@@ -34,8 +34,8 @@ async function createMasterClass(req: Request, res: Response){
         const data = req.body
         console.log(data)
         await service_funcs.createMasterClass(data);
-        res.send(200)
         console.log('Всё супер')
+        res.render('admin')
 
 }
 
