@@ -1,0 +1,42 @@
+ body{
+    margin: 0;
+    padding: 0;
+ }
+ .background{
+    height: 2000px;
+    background-image: url('/static/images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ h1{
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+    display: flex; /* Включает Flexbox */
+    align-items: center; /* Центрирует текст по вертикали */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    text-align: center; 
+ }
+ .photoes1{
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+ }
+ .photoes2 {
+    width: 300px; /* Ширина карточки */
+    padding: 15px; /* Внутренние отступы */
+    border: 2px solid #E0E0E0; /* Граница */
+    border-radius: 10px; /* Скругленные углы */
+    background-color: #F9F9F9; /* Фон карточки */
+    text-align: center; /* Центровка содержимого */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень вокруг */
+    margin: 20px auto; /* Центровка карточки */
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-left: 290px;
+    margin-right: 250px;
+ }
+ p{
+    font-weight: bold;
+    margin-left: 50px;
+ }
