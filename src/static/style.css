@@ -1,23 +1,24 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    @font-face {
+        font-family: 'Jost', sans-serif;
+        src: url('/static/fonts/Jost-Regular.ttf');
+    }
 }
-
 body {
-    line-height: 1.5;
-    font-family:'Jost' ;
-    font-weight: 700;
-    font-style: normal;
+    font-family: Arial, sans-serif;
+    background-color: #D7C0AE;
 }
-
 header {
     background-color: #d2b189; /* Светло-коричневый фон для хедера */
     padding: 10px 20px;
     text-align: center;
 }
-
 header nav {
     display: flex;
     justify-content: space-between;
@@ -52,12 +53,10 @@ nav a {
     font-weight: bold;
     font-size: 16px;
 }
-
 nav a:hover {
     color: #3a76c0; /* Цвет текста при наведении - синий */
     text-decoration: underline; /* Подчеркивание при наведении */
 }
-
 .language {
     position: relative; /* Для коректної позиції стрілки */
 }
@@ -71,6 +70,149 @@ nav a:hover {
     border-top: 6px solid #4e1f47; /* Верхня сторона (колір) */
     margin-right: 8px; /* Відступ між стрілкою та текстом */
     transition: border-color 0.3s ease;
+}
+
+.language:hover .arrow {
+    border-top-color: #3a76c0; /* Зміна кольору стрілки при наведенні */
+}
+.background-image {
+    width: 100%; /* Полная ширина */
+    height: 800px; /* Высота области с фоном */
+    background-image: url('/static/images/bg1.jpg'); /* Укажите путь к изображению */
+    background-size: cover; /* Покрыть всю область */
+    background-position: center; /* Центрировать изображение */
+    background-repeat: no-repeat; /* Отключить повтор */
+}
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 80px;
+}
+.about-section-wrapper {
+    position: relative; /* Для позиционирования общего фона */
+}
+.shared-background1 {
+    position: absolute; /* Абсолютное позиционирование общего фона */
+    top: -50;
+    left: -100;
+    width: 100%; /* Фон растягивается на всю ширину контейнера */
+    height: 900px; /* Растягивается по высоте секции */
+    object-fit: cover; /* Масштабирует изображение, сохраняя пропорции */
+    z-index: -1; /* Размещаем фон под содержимым */
+}
+.shared-background2 {
+    position: absolute; /* Абсолютное позиционирование общего фона */
+    top: -400;
+    left: 1210; /* Привязка фона к левой стороне */
+    width: 300px; /* Уменьшение ширины изображения */
+    height: 980px; /* Растягивается по высоте секции */
+    object-fit: scale-down; 
+    z-index: -1; /* Размещаем фон под содержимым */
+    opacity: 0.3;
+}
+.about-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.about-item {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 500px;
+    z-index: 1; /* Поверх общего фона */
+}
+
+.about-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-item h3 {
+    height: 70px;
+    background-color: #D9D9D9;
+    font-weight: normal;
+    font-style: italic;
+    display: flex; /* Включает Flexbox */
+    align-items: center; /* Центрирует текст по вертикали */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    text-align: center; /* Дополнительно выравнивает текст внутри */
+}
+
+
+.about-item a {
+    position: relative;
+    text-decoration: none;
+    color: #4e1f47;
+    font-weight: bold;
+    z-index: 1;
+    font-size: large;
+
+}
+.about-item a:hover {
+    color: #3a76c0; /* Цвет текста при наведении - синий */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.about-item a::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom:-10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.btn-learn-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #060813, #072051); /* Градиент */
+    color: white;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.description {
+    text-align: start ;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 95%;
+    color: #333;
+    font-size: 1.5rem;
+}#firstText {
+    font-size: 32px;
+    padding-left: 42px;
+    padding-right: 150px;
+        
+    
+}
+#h3 {
+    font-size: 32px;
+    padding-left: 41px;
+
+}
+#unorderedList{
+    font-size: 32px;
+    padding-left: 129px;
+    padding-right: 30px;
+}
+#firstPhoto {
+    position: relative;
+    right: -869px;
+    top: -578px;  
+}
+#secondPhoto {
+    position: relative;
+    right: -439px;
+    top: -195px;
 }
 
 .hero {
@@ -137,8 +279,6 @@ nav a:hover {
 
     display: inline;
     flex-direction: column;
-
-    font-family:'Jost' ;
     font-size: 28px;
 }
 
@@ -163,8 +303,6 @@ nav a:hover {
     flex-direction: column;
     gap: 10px;
     margin: 50px;
-
-    font-family:'Jost' ;
     font-size: 28px;
 }
 
