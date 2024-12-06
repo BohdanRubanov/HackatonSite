@@ -106,7 +106,7 @@ h1 {
 }
 .shared-background1 {
     position: absolute; /* Абсолютное позиционирование общего фона */
-    top: -50;
+    top: -80;
     left: -100;
     width: 100%; /* Фон растягивается на всю ширину контейнера */
     height: 900px; /* Растягивается по высоте секции */
@@ -143,20 +143,37 @@ h1 {
     width: 100%;
     border-radius: 5px;
 }
-.box{
-    display:flex;
-    justify-content: center;
-    gap: 130px;
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    padding: 20px;
+    font-size: 44px;
 }
-.box1{
-    display:flex;
-    justify-content: center;
-    gap: 50px;
+  
+.stat-item {
+    text-align: center;
+    max-width: 200px; /* Чтобы текст выглядел компактно */
+    font-size: 44px;
+}
+  
+.stat-item h2 {
+    font-size: 24px;
+    color: #000; /* Чёрный цвет для чисел */
+    margin: 0 0 10px;
+    font-size: 44px;
+}
+  
+.stat-item p {
+    font-size: 16px;
+    color: #291F20; /* Тёмно-серый цвет для текста */
+    margin: 0;
+    font-size: 24px;
 }
 
 .about-item h3 {
     height: 70px;
-    background-color: #D9D9D9;
     font-weight: normal;
     font-style: italic;
     display: flex; /* Включает Flexbox */
@@ -171,14 +188,11 @@ h1 {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    z-index: 1;
+
     font-size: large;
 
 }
-.about-item a:hover {
-    color: #3a76c0; /* Цвет текста при наведении - синий */
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
+
 .about-item a::before{
     content: '';
     position: absolute;
@@ -292,21 +306,15 @@ h1 {
     width: 297;
     height: 61;
 
-    font-size: 1rem;
-    background-color: #072051;
+    background: linear-gradient(to top, #060813, #072051);
     color: #fff;
     border: none;
     border-radius: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     display: inline;
 
     flex-direction: column;
     gap: 10px;
     margin: 50px;
     font-size: 26px;
-}
-
-.button-stading:hover {
-    background-color: #072051;
 }
