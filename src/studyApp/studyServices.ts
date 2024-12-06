@@ -4,13 +4,19 @@ import { Prisma, PrismaClient } from '@prisma/client';
 import client from '../client/prismaClient';
 
 interface IMasterClass{
-  id:          number
-  Name:        String
-  Description: String
-  Video:       String
-  Examples:    String
-  DopInfo:     String
-  Author:      String
+    Name:        String
+    InstructionImg1: String
+    InstructionImg2: String
+    Description: String
+    Video:       String
+    ExamplesImg1:    String
+    ExamplesImg2:    String
+    ExamplesImg3:    String
+    InjuredImg1:    String
+    InjuredImg2:    String
+    InjuredImg3:    String
+    DopInfo:     String
+    Author:      String
 }
 
 interface IMasterClassError{

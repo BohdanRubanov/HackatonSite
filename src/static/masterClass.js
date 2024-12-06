@@ -8,12 +8,19 @@ button.addEventListener('click', () => {
         method: 'POST',
         
         body: JSON.stringify({
-            Name: 'Труси на зав’язках',
-            Description: 'be be be',
-            Video: 'Be be be be',
-            Examples: 'Be be be',
-            DopInfo: ' be be be',
-            Author: 'be be be'
+            Name: "Труси на зав'язках",
+            InstructionImg1: "",
+            InstructionImg2: "",
+            Description: "",
+            Video: "",
+            ExamplesImg1: "",
+            ExamplesImg2: "",
+            ExamplesImg3: "",
+            InjuredImg1: "",
+            InjuredImg2: "",
+            InjuredImg3: "",
+            DopInfo:  "",
+            Author: "" 
         }),
         
         headers: {

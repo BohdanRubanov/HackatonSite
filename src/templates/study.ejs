@@ -29,18 +29,24 @@
 <body>
     <a href="/masterclass/"></a>
     <h1>JJrfr</h1>
+    <ul>
+
+    
         <% if (masterClasses && masterClasses.length > 0) { %>
             <% masterClasses.forEach(function(masterClass) { %>
-                    <a href="/study/<%= masterClass.id %>"><%= masterClass.Name %></a>
+                <li><a href="/study/<%= masterClass.id %>"><%= masterClass.Name %></a></li>
             <% }) %>
         <% } else { %>
             <p>Майстер класів поки немає</p>
         <% } %>
+    </ul>
     <button id='button' type="button">Створити виріб</button>
-    <h1>Кіберодяг</h1>
-    <p>Кібертруси</p>
-    <ul>
-        <li><a href="/profile/">Труси на зав'язках</a></li>
+
+
+    <!-- <h1>Кіберодяг</h1> -->
+    <!-- <p>Кібертруси</p> -->
+    <!-- <ul> -->
+        <!-- <li><a href="/profile/">Труси на зав'язках</a></li>
         <li><a href="/profile/">Бавовнянки</a></li>
         <li><a href="/profile/">Кібершорти</a></li>
         <li><a href="/profile/">Кіберштани</a></li>
@@ -52,8 +58,8 @@
         <li><a href="/profile/">Чохол на апарат</a></li>
         <li><a href="/profile/">Адаптивні шкарпетки</a></li>
         <li><a href="/profile/">Торбинка українського воїна</a></li>
-    </ul>
-    <h1>Бронеодяг</h1>
+    </ul> -->
+    <!-- <h1>Бронеодяг</h1> -->
 
 </body>
 </html>
