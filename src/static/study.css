@@ -69,21 +69,19 @@ nav a:hover {
 .background-image {
     width: 100%; /* Полная ширина */
     height: 100%; /* Высота области с фоном */
-    background-image: url('/static/images/bg2.png'); /* Укажите путь к изображению */
+    background-image: url('/static/images/bg3.png'); /* Укажите путь к изображению */
     background-size: cover; /* Покрыть всю область */
     background-position: center; /* Центрировать изображение */
     background-repeat: no-repeat; /* Отключить повтор */
 }
-p{
-    margin-left: 10px;
-    font-weight: bold;
-}
 a{
     text-decoration: none;
     color: black;
-
+    font-weight: bold;
 }
 ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
     list-style-type: disc; /* Показывает стандартные маркеры */
     padding-left: 30px; /* Добавляет отступ для маркеров */
 }

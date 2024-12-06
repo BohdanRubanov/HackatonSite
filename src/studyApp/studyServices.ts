@@ -7,7 +7,6 @@ interface IMasterClass{
     Name:        String
     InstructionImg1: String
     InstructionImg2: String
-    Description: String
     Video:       String
     ExamplesImg1:    String
     ExamplesImg2:    String
