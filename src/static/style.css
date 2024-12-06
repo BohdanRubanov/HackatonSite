@@ -100,6 +100,10 @@ h1 {
 .about-section-wrapper {
     position: relative; /* Для позиционирования общего фона */
 }
+
+.about-section-wrapper .box-1{
+    top:10px;
+}
 .shared-background1 {
     position: absolute; /* Абсолютное позиционирование общего фона */
     top: -50;
