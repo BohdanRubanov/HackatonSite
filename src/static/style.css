@@ -1,14 +1,13 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital@0;1&display=swap');
 
 * {
+
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @font-face {
-        font-family: 'Jost', sans-serif;
-        src: url('/static/fonts/Jost-Regular.ttf');
-    }
+    font-family: "Jost", serif;
+
 }
 body {
     font-family: Arial, sans-serif;
@@ -18,11 +17,12 @@ header {
     background-color: #d2b189; /* Светло-коричневый фон для хедера */
     padding: 10px 20px;
     text-align: center;
+
 }
 header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:self-end;
     background-color: #d2b18a; /* Колір фону, схожий на ваш */
     padding: 10px 20px;
 }
@@ -31,13 +31,13 @@ header nav {
     flex: 1; /* Залишити на своєму місці */
     display: flex;
     justify-content: flex-start;
+
 }
 
-.menu-center {
-    flex: 2;
-    display: flex;
-    justify-content: center; /* Вирівнювання по центру */
-    gap: 50px; /* Відстань між елементами */
+
+.menu-left img{
+    width: auto;
+    height: 42px;
 }
 
 .menu-right {
@@ -46,12 +46,22 @@ header nav {
     justify-content: flex-end; /* Вирівнювання до правого краю */
     gap: 30px;
 }
+.menu-right youtub{
+    width: auto;
+    height: auto;
+}
+.menu-right telega{
+    width: auto;
+    height: auto;
+}
 
 nav a {
     text-decoration: none;
     color: #4a3a3a; /* Колір тексту */
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
+    text-shadow: 8px 8px rgba(0, 0, 0, 0.10);
+    
 }
 nav a:hover {
     color: #3a76c0; /* Цвет текста при наведении - синий */
@@ -91,9 +101,13 @@ h1 {
 .about-section-wrapper {
     position: relative; /* Для позиционирования общего фона */
 }
+
+.about-section-wrapper .box-1{
+    top:10px;
+}
 .shared-background1 {
     position: absolute; /* Абсолютное позиционирование общего фона */
-    top: -50;
+    top: -80;
     left: -100;
     width: 100%; /* Фон растягивается на всю ширину контейнера */
     height: 900px; /* Растягивается по высоте секции */
@@ -110,6 +124,44 @@ h1 {
     z-index: -1; /* Размещаем фон под содержимым */
     opacity: 0.3;
 }
+.about-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    padding: 20px;
+    font-size: 44px;
+}
+  
+.stat-item {
+    text-align: center;
+    max-width: 200px; /* Чтобы текст выглядел компактно */
+    font-size: 44px;
+}
+  
+.stat-item h2 {
+    font-size: 24px;
+    color: #000; /* Чёрный цвет для чисел */
+    margin: 0 0 10px;
+    font-size: 44px;
+}
+  
+.stat-item p {
+    font-size: 16px;
+    color: #291F20; /* Тёмно-серый цвет для текста */
+    margin: 0;
+    font-size: 24px;
+}
+
 .about-section {
     position: relative;
     display: flex;
@@ -167,9 +219,10 @@ h1 {
     z-index: -1;
 }
 
-.btn-learn-more {
+.support {
     display: block;
-    margin: 20px auto;
+    margin-bottom: 5px;
+    margin-left: 1300px;
     padding: 10px 20px;
     background: linear-gradient(45deg, #060813, #072051); /* Градиент */
     color: white;
@@ -178,6 +231,26 @@ h1 {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    
+}
+.support a{
+    text-decoration: None;
+    color: white;
+}
+.join {
+    display: block;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    margin-left: 740px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #060813, #072051); /* Градиент */
+    color: white;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    
 }
 
 .description {
@@ -187,23 +260,8 @@ h1 {
     width: 95%;
     color: #333;
     font-size: 1.5rem;
-}#firstText {
-    font-size: 32px;
-    padding-left: 42px;
-    padding-right: 150px;
-        
-    
 }
-#h3 {
-    font-size: 32px;
-    padding-left: 41px;
 
-}
-#unorderedList{
-    font-size: 32px;
-    padding-left: 129px;
-    padding-right: 30px;
-}
 #firstPhoto {
     position: relative;
     right: -869px;
@@ -261,51 +319,40 @@ h1 {
     font-size: 31px;
 }
 
-
-.button-donat {
-    width: 216;
-    height: 56;
-
-    /* width: 154;
-    height: 32; */
-
-    font-size: 1rem;
-    background-color: #072051;
-    color: #fff;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    display: inline;
-    flex-direction: column;
-    font-size: 28px;
-}
-
-.button-donat:hover {
-    background-color: #072051;
-}
-
-
 .button-stading {
-    width: 364;
-    height: 68;
+    width: 297;
+    height: 61;
 
-    font-size: 1rem;
-    background-color: #072051;
-    color: #fff;
+    font-size: 23;
+    background-image:linear-gradient(to bottom, #072051, #060813);
+    color: #ffffff; 
     border: none;
     border-radius: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
     display: inline;
 
     flex-direction: column;
-    gap: 10px;
+    gap: 10px;            
     margin: 50px;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .button-stading:hover {
     background-color: #072051;
 }
+
+.aboutAs{
+    display: flex;
+    font-size: 36px;
+    color: #000000;
+    margin-left: 66px;
+    line-height: 52px;
+    font-weight: 1194px;
+    padding-left: 50px;
+    /* width: 1280px;
+    height:676px; */
+
+}
+
+
