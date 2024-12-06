@@ -7,8 +7,14 @@ import express, { Express, Request, Response } from 'express'
 import service_funcs from './studyServices'
 
 async function getAllMasterClasses(req: Request, res: Response) {
+    
     const context = await service_funcs.getAllMasterClasses()
-    res.render('study', context.masterClasses)
+    if (!context.masterClasses){
+        res.send("error")
+    }
+    console.log(context)
+    
+    res.render('masterclass', context.masterClasses)
 }
 
 async function getMasterClassById(req: Request, res: Response){
