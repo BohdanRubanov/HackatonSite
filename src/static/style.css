@@ -59,7 +59,7 @@ nav a {
     color: #4a3a3a; /* Колір тексту */
     font-weight: bold;
     font-size: 24px;
-    text-shadow: 8px 8px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 4px 2E2B2B;
     
 }
 nav a:hover {
@@ -162,8 +162,8 @@ h1 {
 
 }
 .about-item a:hover {
-    color: #3a76c0; /* Цвет текста при наведении - синий */
-    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #ffffff; /* Цвет текста при наведении - синий */
+    text-decoration: None; /* Подчеркивание при наведении */
 }
 .about-item a::before{
     content: '';
@@ -278,7 +278,7 @@ h1 {
     height: 61;
 
     font-size: 1rem;
-    background-color: #072051;
+    background-image: linear-gradient(to bottom, #072051, #060813);
     color: #fff;
     border: none;
     border-radius: 14px;
