@@ -3,33 +3,55 @@ import studyRepository from "./studyRepository";
 import { Prisma, PrismaClient } from '@prisma/client';
 import client from '../client/prismaClient';
 
-
-
-async function getAllMasterClasses(){
-    
-    const context = {
-        masterClasses: await studyRepository.getAllMasterClasses()
-    }
-    
-    return context
+interface IMasterClass{
+  id:          number
+  Name:        String
+  Description: String
+  Video:       String
+  Examples:    String
+  DopInfo:     String
+  Author:      String
 }
 
-async function getMasterClassById(id: number){
-    const data = await studyRepository.getMasterClassById(id)
+interface IMasterClassError{
+    status: 'error',
+    message: string
+}
 
-    if (data.status == 'error' || data.status == 'error'){
-        return {
-                    status: 'error',
-                    message: 'not found',
-                }}
-    console.log(data)
 
-        
-    return {
-        context: data.masterClass,
-        message: data.message,
-        status: data.status
-    }}
+interface IMasterClassesSuccess{
+    status: 'success',
+    data: IMasterClass[]
+}
+
+interface IMasterClassSuccess{
+    status: 'success',
+    data: IMasterClass
+}
+
+
+async function getAllMasterClasses(): Promise< IMasterClassesSuccess | IMasterClassError >{
+    
+    const masterClasses = await studyRepository.getAllMasterClasses()
+
+
+    if (!masterClasses){
+        return {status: 'error', message: 'products not found'};
+    }
+    return {status: 'success', data: masterClasses};
+}
+
+async function getMasterClassById(id: number): Promise< IMasterClassSuccess | IMasterClassError > {
+    let masterClass = await studyRepository.getMasterClassById(id)
+
+    if (!masterClass) {
+        return {status: 'error', message: 'product not found'}
+    }
+
+    return {status: 'success', data: masterClass}
+    
+}
+
     
 
 

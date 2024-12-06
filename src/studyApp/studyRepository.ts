@@ -49,72 +49,25 @@ async function getAllMasterClasses(){
         let masterClasses = await client.masterClass.findMany({
         
         })
-        if (!masterClasses) {
-            return {
-                status: 'not found',
-                message: 'Posts not found',
-            }}
-        return{
-            status: 'success',
-            message: 'Posts successfully found',
-            masterClasses: masterClasses,
-        }
-    } catch (err) {
+        return masterClasses
+    } catch(err){
         if (err instanceof Prisma.PrismaClientKnownRequestError){
             if (err.code == 'P2002'){
                 console.log(err.message);
                 throw err;
             }
-            else if (err.code == 'P2015'){
-                console.log(err.message);
-                throw err;
-            }
-            else if (err.code == 'P2019'){
-                console.log(err.message);
-                throw err;
-            }
-    }}
+        }
+    }
 }
 
 async function getMasterClassById(id: number){
-    try{
+
     let masterClass = await client.masterClass.findUnique({
         where:{
             id: id
         }
-    
     })
-    if (!masterClass) {
-        return {
-            status: 'error',
-            message: 'Post not found',
-            data: null
-        }}
-    return {
-        status: 'success',
-        message: 'Posts successfully found',
-        masterClass: masterClass
-    }
-    } catch (err) {
-        if (err instanceof Prisma.PrismaClientKnownRequestError){
-            if (err.code == 'P2002'){
-                console.log(err.message);
-                throw err;
-            }
-            else if (err.code == 'P2015'){
-                console.log(err.message);
-                throw err;
-            }
-            else if (err.code == 'P2019'){
-                console.log(err.message);
-                throw err;
-            }
-    }
-        return {
-            status: 'error',
-            message: 'error',
-        }}
-
+    return masterClass
 }
 
 

@@ -9,12 +9,12 @@ import service_funcs from './studyServices'
 async function getAllMasterClasses(req: Request, res: Response) {
     
     const context = await service_funcs.getAllMasterClasses()
-    if (!context.masterClasses){
+    if (context.status == "error"){
         res.send("error")
+    } else{
+        console.log(context.data)
+        res.render('study', {masterClasses: context.data})
     }
-    console.log(context)
-    
-    res.render('masterclass', context.masterClasses)
 }
 
 async function getMasterClassById(req: Request, res: Response){

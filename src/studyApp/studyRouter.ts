@@ -12,7 +12,7 @@ const router: Router = express.Router()
 import controller_funcs from './studyController'
 
 
-router.get('/masterClasses', controller_funcs.getAllMasterClasses)
+router.get('/', controller_funcs.getAllMasterClasses)
 
 router.post('/create', authMiddleware, userRoleMiddleware, controller_funcs.createMasterClass)
 
