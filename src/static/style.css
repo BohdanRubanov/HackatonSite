@@ -1,14 +1,13 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital@0;1&display=swap');
 
 * {
+
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @font-face {
-        font-family: 'Jost', sans-serif;
-        src: url('/static/fonts/Jost-Regular.ttf');
-    }
+    font-family: "Jost", serif;
+
 }
 body {
     font-family: Arial, sans-serif;
@@ -59,7 +58,7 @@ nav a {
     color: #4a3a3a; /* Колір тексту */
     font-weight: bold;
     font-size: 24px;
-    text-shadow: 0px 4px 4px 2E2B2B;
+    text-shadow: 8px 8px rgba(0, 0, 0, 0.10);
     
 }
 nav a:hover {
@@ -87,7 +86,7 @@ nav a:hover {
 .background-image {
     width: 100%; /* Полная ширина */
     height: 800px; /* Высота области с фоном */
-    background-image: url('/static/images/bg1.jpg');
+    background-image: url('/static/images/bg1.jpg'); /* Укажите путь к изображению */
     background-size: cover; /* Покрыть всю область */
     background-position: center; /* Центрировать изображение */
     background-repeat: no-repeat; /* Отключить повтор */
@@ -153,6 +152,7 @@ h1 {
     justify-content: center;
     gap: 50px;
 }
+
 .about-item h3 {
     height: 70px;
     background-color: #D9D9D9;
@@ -175,8 +175,8 @@ h1 {
 
 }
 .about-item a:hover {
-    color: #ffffff; /* Цвет текста при наведении - синий */
-    text-decoration: None; /* Подчеркивание при наведении */
+    color: #3a76c0; /* Цвет текста при наведении - синий */
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 .about-item a::before{
     content: '';
@@ -214,7 +214,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-
 #firstPhoto {
     position: relative;
     right: -869px;
@@ -230,7 +229,7 @@ h1 {
 
     width: 100%; 
     height: 832px; 
-    background-image: url('/static/images/bg1.jpg');
+    background-image: url('/static/images/bg1.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -276,13 +275,13 @@ h1 {
     width: 297;
     height: 61;
 
-    font-size: 1rem;
-    background-image: linear-gradient(to bottom, #072051, #060813);
-    color: #fff;
+    font-size: 23;
+    background-image:linear-gradient(to bottom, #072051, #060813);
+    color: #ffffff; 
     border: none;
     border-radius: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
     display: inline;
 
     flex-direction: column;
@@ -296,9 +295,14 @@ h1 {
 }
 
 .aboutAs{
+    display: flex;
     font-size: 36px;
     color: #000000;
     margin-left: 66px;
-    margin-right: 67px;
     line-height: 52px;
+    font-weight: 1194px;
+    padding-left: 50px;
+    /* width: 1280px;
+    height:676px; */
+
 }
