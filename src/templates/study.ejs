@@ -31,7 +31,7 @@
     <h1>JJrfr</h1>
         <% if (masterClasses && masterClasses.length > 0) { %>
             <% masterClasses.forEach(function(masterClass) { %>
-                    <a><%= masterClass.Name %></a>
+                    <a href="/study/<%= masterClass.id %>"><%= masterClass.Name %></a>
             <% }) %>
         <% } else { %>
             <p>Майстер класів поки немає</p>

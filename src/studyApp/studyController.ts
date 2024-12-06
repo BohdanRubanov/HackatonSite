@@ -12,19 +12,19 @@ async function getAllMasterClasses(req: Request, res: Response) {
     if (context.status == "error"){
         res.send("error")
     } else{
-        console.log(context.data)
         res.render('study', {masterClasses: context.data})
     }
 }
 
 async function getMasterClassById(req: Request, res: Response){
     let id = req.params.id
-    const result = await productService.getProductById(+id)
+    const result = await service_funcs.getMasterClassById(+id)
     if (result.status == "error"){
         res.send("ban")
         
     } else{
-        res.render('product', result.data)
+        console.log(result.data)
+        res.render('masterclass', result.data)
     }
 
 }
