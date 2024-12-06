@@ -18,14 +18,13 @@ async function getAllMasterClasses(req: Request, res: Response) {
 }
 
 async function getMasterClassById(req: Request, res: Response){
-    console.log(req.params.id)
-    const id = Number(req.params.id)
-    const data = await service_funcs.getMasterClassById(id)
-    if (data.status == 'error'){
-        res.send("post not found")
-    }
-    if (data.status == 'success'){
-        res.render('masterclass', {masterClass: data.context})
+    let id = req.params.id
+    const result = await productService.getProductById(+id)
+    if (result.status == "error"){
+        res.send("ban")
+        
+    } else{
+        res.render('product', result.data)
     }
 
 }
