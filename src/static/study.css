@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @font-face {
+        font-family: 'Jost', sans-serif;
+        src: url('/static/fonts/Jost-Regular.ttf');
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D7C0AE;
+}
+header {
+    background-color: #d2b189; /* Светло-коричневый фон для хедера */
+    padding: 10px 20px;
+    text-align: center;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d2b18a; /* Колір фону, схожий на ваш */
+    padding: 10px 20px;
+}
+
+.menu-left {
+    flex: 1; /* Залишити на своєму місці */
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.menu-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання до правого краю */
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a3a3a; /* Колір тексту */
+    font-weight: bold;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #3a76c0; /* Цвет текста при наведении - синий */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.language {
+    position: relative; /* Для коректної позиції стрілки */
+}
+
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent; /* Ліва сторона трикутника */
+    border-right: 6px solid transparent; /* Права сторона трикутника */
+    border-top: 6px solid #4e1f47; /* Верхня сторона (колір) */
+    margin-right: 8px; /* Відступ між стрілкою та текстом */
+    transition: border-color 0.3s ease;
+}
+
+.language:hover .arrow {
+    border-top-color: #3a76c0; /* Зміна кольору стрілки при наведенні */
+}
+.background-image {
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Высота области с фоном */
+    background-image: url('/static/images/bg2.png'); /* Укажите путь к изображению */
+    background-size: cover; /* Покрыть всю область */
+    background-position: center; /* Центрировать изображение */
+    background-repeat: no-repeat; /* Отключить повтор */
+}
