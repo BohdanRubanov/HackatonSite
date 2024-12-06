@@ -9,16 +9,16 @@ import express, {Router } from 'express'
 
 const router: Router = express.Router()
 
-import controller_funcs from './postController'
+import controller_funcs from './studyController'
 
 
-router.get('/', controller_funcs.getAllPosts)
+router.get('/', controller_funcs.getAllMasterClasses)
 
-router.post('/create', authMiddleware, userRoleMiddleware, controller_funcs.createPost)
+router.post('/create', authMiddleware, userRoleMiddleware, controller_funcs.createMasterClass)
 
 
 
-router.get('/:id', controller_funcs.getPostById)
+router.get('/:id', controller_funcs.getMasterClassById)
 
 
 

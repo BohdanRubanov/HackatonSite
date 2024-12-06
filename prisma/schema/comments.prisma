@@ -1,0 +1,8 @@
+model Comments {
+  id            Int         @id @default(autoincrement())
+  Name          String
+  Text          String
+  Date          String
+  MasterClass   MasterClass @relation(fields: [masterClassId], references: [id])
+  masterClassId Int         @unique
+}

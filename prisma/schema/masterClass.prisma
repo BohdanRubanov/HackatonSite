@@ -1,0 +1,10 @@
+model MasterClass {
+  id          Int        @id @default(autoincrement())
+  Name        String
+  Description String
+  Video       String
+  Examples    String
+  DopInfo     String
+  Author      String
+  Comments  Comments[]
+}

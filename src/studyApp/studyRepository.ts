@@ -2,10 +2,10 @@ import { Prisma, PrismaClient } from '@prisma/client';
 import client from '../client/prismaClient';
 
 
-async function getPostCount(){
+async function getMasterClassCount(){
     try{
 
-        let count = await client.post.count()
+        let count = await client.masterClass.count()
         if (!count){
             return {
                 status: 'not found',
@@ -44,12 +44,12 @@ async function getPostCount(){
         }
 }
 
-async function getAllPosts(){
+async function getAllMasterClasses(){
     try{
-        let posts = await client.post.findMany({
+        let masterClasses = await client.masterClass.findMany({
         
         })
-        if (!posts) {
+        if (!masterClasses) {
             return {
                 status: 'not found',
                 message: 'Posts not found',
@@ -57,7 +57,7 @@ async function getAllPosts(){
         return{
             status: 'success',
             message: 'Posts successfully found',
-            posts: posts,
+            masterClasses: masterClasses,
         }
     } catch (err) {
         if (err instanceof Prisma.PrismaClientKnownRequestError){
@@ -76,15 +76,15 @@ async function getAllPosts(){
     }}
 }
 
-async function getPostById(id: number){
+async function getMasterClassById(id: number){
     try{
-    let post = await client.post.findUnique({
+    let masterClass = await client.masterClass.findUnique({
         where:{
             id: id
         }
     
     })
-    if (!post) {
+    if (!masterClass) {
         return {
             status: 'error',
             message: 'Post not found',
@@ -93,7 +93,7 @@ async function getPostById(id: number){
     return {
         status: 'success',
         message: 'Posts successfully found',
-        post: post
+        masterClass: masterClass
     }
     } catch (err) {
         if (err instanceof Prisma.PrismaClientKnownRequestError){
@@ -118,12 +118,12 @@ async function getPostById(id: number){
 }
 
 
-async function createPost(data: Prisma.PostCreateInput){
+async function createMasterClass(data: Prisma.MasterClassCreateInput){
     try{
-    let post = await client.post.create({
+    let masterClass = await client.masterClass.create({
         data: data
     })
-    if (!post) {
+    if (!masterClass) {
         return {
             status: 'not found',
             message: 'Post not found',
@@ -132,7 +132,7 @@ async function createPost(data: Prisma.PostCreateInput){
     return {
         status: 'success',
         message: 'Posts successfully found',
-        post: post
+        masterClass: masterClass
     }
     }catch (err) {
         if (err instanceof Prisma.PrismaClientKnownRequestError){
@@ -152,10 +152,10 @@ async function createPost(data: Prisma.PostCreateInput){
 }  
 
 
-const postRepository = {
-    getAllPosts:getAllPosts,
-    getPostById:getPostById,
-    createPost:createPost,
-    getPostCount:getPostCount
+const studyRepository = {
+    getAllMasterClasses:getAllMasterClasses,
+    getMasterClassById:getMasterClassById,
+    createMasterClass:createMasterClass,
+    getMasterClassCount:getMasterClassCount
 }
-export default postRepository
+export default studyRepository

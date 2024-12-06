@@ -8,9 +8,12 @@ button.addEventListener('click', () => {
         method: 'POST',
         
         body: JSON.stringify({
-            name: 'Костюм',
-            img: 'https://images.prom.ua/6268925569_w600_h600_6268925569.jpg',
-            description: 'Be be be be'
+            Name: 'Труси на зав’язках',
+            Description: 'be be be',
+            Video: 'Be be be be',
+            Examples: 'Be be be',
+            DopInfo: ' be be be',
+            Author: 'be be be'
         }),
         
         headers: {

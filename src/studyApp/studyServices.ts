@@ -1,21 +1,21 @@
 // Здесь вся логика работы с данными 
-import postRepository from "./postRepository";
+import studyRepository from "./studyRepository";
 import { Prisma, PrismaClient } from '@prisma/client';
 import client from '../client/prismaClient';
 
 
 
-async function getAllPosts(){
+async function getAllMasterClasses(){
     
     const context = {
-        posts: await postRepository.getAllPosts()
+        masterClasses: await studyRepository.getAllMasterClasses()
     }
     
     return context
 }
 
-async function getPostById(id: number){
-    const data = await postRepository.getPostById(id)
+async function getMasterClassById(id: number){
+    const data = await studyRepository.getMasterClassById(id)
 
     if (data.status == 'error' || data.status == 'error'){
         return {
@@ -26,21 +26,21 @@ async function getPostById(id: number){
 
         
     return {
-        context: data.post,
+        context: data.masterClass,
         message: data.message,
         status: data.status
     }}
     
 
 
-async function createPost(data: Prisma.PostCreateInput){
-    await postRepository.createPost(data)
+async function createMasterClass(data: Prisma.MasterClassCreateInput){
+    await studyRepository.createMasterClass(data)
 }
 
 const service_funcs = {
-    getAllPosts: getAllPosts,
-    getPostById: getPostById,
-    createPost: createPost
+    getAllMasterClasses: getAllMasterClasses,
+    getMasterClassById: getMasterClassById,
+    createMasterClass: createMasterClass
 } 
 
 export default service_funcs
